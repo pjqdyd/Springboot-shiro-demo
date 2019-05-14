@@ -51,6 +51,7 @@ public class ShiroConfig {
         //filterMap.put("/userApi/update", "authc");
 
         filterMap.put("/userApi/index", "anon");
+        filterMap.put("/userApi/loginApi", "anon");
         filterMap.put("/userApi/*", "authc");
 
         shiroFilterFactoryBean.setLoginUrl("/userApi/login"); //设置默认的登录跳转页面
