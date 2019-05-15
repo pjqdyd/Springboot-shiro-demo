@@ -53,6 +53,14 @@ public class UserController {
     }
 
     /**
+     * 提示未授权的html页面
+     */
+    @GetMapping("/noAuth")
+    public String noAuth(){
+        return "/info/noAuth";
+    }
+
+    /**
      * 登录的处理逻辑接口
      */
     @PostMapping("/loginApi")

@@ -7,6 +7,8 @@ public class User {
 
     private String password;
 
+    private String perms;
+
     public Integer getId() {
         return id;
     }
@@ -30,4 +32,8 @@ public class User {
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
     }
+
+    public String getPerms() { return perms; }
+
+    public void setPerms(String perms) { this.perms = perms; }
 }

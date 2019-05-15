@@ -21,4 +21,10 @@ public class UserServiceImpl implements UserService {
     public User findByName(String name) {
         return userMapper.findByName(name);
     }
+
+    /**通过id查找**/
+    @Override
+    public User findById(Integer id) {
+        return userMapper.selectByPrimaryKey(id);
+    }
 }
