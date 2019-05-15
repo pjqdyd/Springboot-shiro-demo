@@ -50,11 +50,11 @@ public class ShiroConfig {
         //使用有序的Map集合来装载url资源与权限
         Map<String, String> filterMap = new LinkedHashMap<>();
 
-        //认证过滤
+        //认证过滤, 会进入realm的认证方法
         filterMap.put("/userApi/index", "anon");
         filterMap.put("/userApi/loginApi", "anon");
 
-        //授权过滤, "user:add"代表授权字符串
+        //授权过滤,会进入realm的授权方法, "user:add"代表授权字符串, 只有当前主体有这个权限才能访问
         filterMap.put("/userApi/add", "perms[user:add]");
         filterMap.put("/userApi/update", "perms[user:update]");
 
